@@ -3,20 +3,43 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
     box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
     font-family: 'Poppins',sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #323946;
+    --text-color: #000000;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
     color: #000000;
 }
+
+.section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    padding: 2rem 9%;
+    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +47,7 @@ body {
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 3.0rem;
     color: #0a0a0a;
     text-decoration: none;
     font-weight: 600;
@@ -35,11 +58,11 @@ body {
 
 .navbar a {
     display: inline-block;
-    font-size: 20px;
+    font-size: 2.5rem;
     color: #000000;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
+    font-weight: 600;
+    margin-left: 4rem;
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
@@ -51,12 +74,18 @@ body {
     color: darkcyan;
 }
 
+#Menu-icon {
+    font-size: 3.6rem;
+    color: black;
+    display: none;
+}
+
 .Home {
     position:  relative;
     width: 100%;
     height: 90vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 70px 10% 0;
 }
@@ -147,9 +176,84 @@ body {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: .2s;
+    transition: .5s ease;
 }
 
+.btn:hover {
+    box-shadow: none;
+}
 
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(#ffffff);
+}
+
+.About-img {
+    width: 35vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.About-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.About-content h3 {
+    font-size: 2.6rem;
+}
+
+.About-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.Skills h2 {
+    margin-bottom: 5rem;
+}
+
+.Skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.Skills-container .Skills-box {
+    flex: 1 1 30rem;
+    background: whitesmoke;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--main-color);
+    transition: .5s ease;
+}
+
+.Skills-container .Skills-box:hover {
+    border-color: var(--text-color);
+    transform: scale(1.02);
+}
+
+.Skills-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.Skills-box h3 {
+    font-size: 2.6rem;
+}
+
+.Skills-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem ;
+}
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -223,17 +327,3 @@ body {
         transform: translateY(0);
     }
 }
-
-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-width: 100%;
-height: 100%;
-    box-sizing: border-box;
-    display: block;
-    background-color: #ffffff;
-background-image: linear-gradient(to bottom, rgb(255, 251, 0)86), #0e4166);
-    z-index: -1;
-}
-

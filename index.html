@@ -7,70 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-          <defs>
-              <linearGradient id="bg">
-                  <stop offset="0%" style="stop-color:rgba(130, 158, 249, 0.06)"></stop>
-                  <stop offset="50%" style="stop-color:rgba(76, 190, 255, 0.6)"></stop>
-                  <stop offset="100%" style="stop-color:rgba(115, 209, 72, 0.2)"></stop>
-              </linearGradient>
-              <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
-      s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
-          </defs>
-          <g>
-              <use xlink:href='#wave' opacity=".3">
-                  <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="translate"
-            dur="10s"
-            calcMode="spline"
-            values="270 230; -334 180; 270 230"
-            keyTimes="0; .5; 1"
-            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
-            repeatCount="indefinite" />
-              </use>
-              <use xlink:href='#wave' opacity=".6">
-                  <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="translate"
-            dur="8s"
-            calcMode="spline"
-            values="-270 230;243 220;-270 230"
-            keyTimes="0; .6; 1"
-            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
-            repeatCount="indefinite" />
-              </use>
-              <use xlink:href='#wave' opacty=".9">
-                  <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="translate"
-            dur="6s"
-            calcMode="spline"
-            values="0 230;-140 200;0 230"
-            keyTimes="0; .4; 1"
-            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
-            repeatCount="indefinite" />
-              </use>
-          </g>
-      </svg>
-
+        <!-- header section design  -->
       <header class="header">
             <a href="#" class="logo">KD Nunag.</a>
 
+            <i class='bx bx-menu' id="Menu-icon"></i>
+
             <nav class="navbar">
-                <a href="#" style="--i:1;"class="active">Home</a>
-                <a href="#" style="--i:2;">About</a>
-                <a href="#" style="--i:3;">Skills</a>
-                <a href="#" style="--i:4;">Projects</a>
-                <a href="#" style="--i:5;">Contact</a>
+                <a href="#Home" style="--i:1;"class="active">Home</a>
+                <a href="#About" style="--i:2;">About</a>
+                <a href="#Skills" style="--i:3;">Skills</a>
+                <a href="#Projects" style="--i:4;">Projects</a>
+                <a href="#Contact" style="--i:5;">Contact</a>
             </nav>
       </header>
       
-      <section class="Home">
+        <!-- home section design -->
+      <section class="Home" id="Home">
             <div class="Home-content">
                 <h3>  Hello,  It's me</h3>
                 <h1><i>Krysstin Dyan</i></h1>
@@ -91,6 +44,67 @@
             </div>
       </section>
 
+     <!-- about section design -->
+     <section class="About" id="About">
+        <div class="About-img">
+            <img src="./assets/AboutPicFinal.png" alt="About-img">
+        </div>
+
+        <div class="About-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Aspiring Graphic Artist</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae temporibus nisi vel 
+                adipisci inventore error quis necessitatibus repudiandae! Impedit corporis magnam 
+                debitis magni reprehenderit ea, amet quia perspiciatis repudiandae porro, consequuntur error officiis, 
+                sequi blanditiis rerum dolor commodi 
+                inventore modi molestiae. Ipsa explicabo sequi ipsum accusamus?</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!-- skills section design -->
+    <section class="Skills" id="Skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="Skills-container">
+            <div class="Skills-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Graphic Designer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Expedita asperiores nam reiciendis.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="Skills-box">
+                <i class='bx bxl-redux'></i>
+                <h3>UI/UX Designer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Expedita asperiores nam reiciendis.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="Skills-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Developer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Expedita asperiores nam reiciendis.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- project design section -->
+    <section class="Project" id="Project">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="Project-container">
+            <div class="project-box">
+                <img src=""
+            </div>
+        </div>
+    </section>
+
+    <!-- custom js -->
       <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
       <script src="script.js"></script>
   </body>
